@@ -14,7 +14,7 @@ function Gen() {
     var imageFile = event.target.files[0];
     console.log("resizing : ", imageFile);
     const options = {
-      maxWidthOrHeight: 1024,
+      maxWidthOrHeight: 768,
       useWebWorker: true,
     };
     try {
