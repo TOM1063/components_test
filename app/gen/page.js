@@ -24,6 +24,10 @@ function Gen() {
         `compressedFile size ${compressedFile.size / 1024 / 1024} MB`
       ); // smaller than maxSizeMB
       const compressedFileUrl = URL.createObjectURL(compressedFile);
+      const a = document.createElement("a");
+      a.href = compressedFileUrl;
+      a.download = "resized.png";
+      a.click();
       setResizedImage(compressedFileUrl);
       setResizing(false);
     } catch (error) {
